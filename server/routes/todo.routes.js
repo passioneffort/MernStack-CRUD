@@ -1,20 +1,20 @@
-const express = require("express");
+// const express = require("express");
 
-const router = express.Router();
+// const router = express.Router();
 
-const {
-  listAllTodo,
-  createOneTodo,
-  updateOneTodo,
-  deleteTodo,
-} = require("../controllers/controllers.js");
+// const {
+//   listAllTodo,
+//   createOneTodo,
+//   updateOneTodo,
+//   deleteTodo,
+// } = require("../controllers/controllers.js");
 
-router.get("/", listAllTodo);
+// router.get("/", listAllTodo);
 
-router.post("/", createOneTodo);
+// router.post("/", createOneTodo);
 
-router.put("/:id", updateOneTodo);
+// router.put("/:id", updateOneTodo);
 
-router.delete("/:id", deleteTodo);
+// router.delete("/:id", deleteTodo);
 
-module.exports = router;
+// module.exports = router;
