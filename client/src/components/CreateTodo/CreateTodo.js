@@ -1,28 +1,28 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+// import { useState } from "react";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
 
-const CreateTodo = () => {
-  const [todoInfo, setTodoInfo] = useState({ title: "", description: "" });
+// const CreateTodo = () => {
+//   const [todoInfo, setTodoInfo] = useState({ title: "", description: "" });
 
-  function handleChange(e) {
-    setTodoInfo((data) => ({ ...data, [e.target.name]: e.target.value }));
-  }
+//   function handleChange(e) {
+//     setTodoInfo((data) => ({ ...data, [e.target.name]: e.target.value }));
+//   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+//   function handleSubmit(e) {
+//     e.preventDefault();
 
-    axios
-      .post("http://localhost:5000/api/todoapp", todoInfo)
-      .then((res) => {
-        setTodoInfo({ title: "", description: "" });
-        console.log(res.data.message);
-      })
-      .catch((err) => {
-        console.log("Error couldn't create TODO");
-        console.log(err.message);
-      });
-  }
+//     axios
+//       .post("http://localhost:5000/api/todoapp", todoInfo)
+//       .then((res) => {
+//         setTodoInfo({ title: "", description: "" });
+//         console.log(res.data.message);
+//       })
+//       .catch((err) => {
+//         console.log("Error couldn't create TODO");
+//         console.log(err.message);
+//       });
+//   }
 
   return (
     <section className="container">
