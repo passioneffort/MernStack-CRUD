@@ -30,6 +30,22 @@ exports.listAllTodo = (req, res) => {
     });
 };
 
+exports.updateOneTodo = (req, res) => {
+  AppTodo.findByIdAndUpdate(req.params.id, req.body)
+    .then((todo) => {
+      console.log({ todo });
+      return res.json({
+        message: "Cheers!! You have successfully updated TODO",
+        todo,
+      });
+    })
+    .catch((err) => {
+      res.status(404).json({
+        message: "Sorry your todo list cannot be updated",
+        error: err.message,
+      });
+    });
+};
 
 exports.deleteTodo = (req, res) => {
   AppTodo.findByIdAndRemove(req.params.id, req.body)
